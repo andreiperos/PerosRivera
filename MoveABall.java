@@ -19,26 +19,23 @@ public class MoveABall extends JFrame implements KeyListener{
 	public void keyPressed(KeyEvent e){
 		if(e.getKeyCode() == KeyEvent.VK_UP){
 			draw.moveUp();
-			System.out.print("Akyat");
+			System.out.print("Upward");
 		}
-
 		else if(e.getKeyCode() == KeyEvent.VK_DOWN){
 			draw.moveDown();
-			System.out.print("Baba");
+			System.out.print("Crouches");
 		}
-
 		else if(e.getKeyCode() == KeyEvent.VK_LEFT){
 			draw.moveLeft();
-			System.out.print("Kaliwa");
+			System.out.print("Backing");
 		}
-
 		else if(e.getKeyCode() == KeyEvent.VK_RIGHT){
 			draw.moveRight();
-			System.out.print("Kanan");
+			System.out.print("Forwarding");
 		}
 	}
+
 	public void keyTyped(KeyEvent e){
-	
 	}
 
 	public void keyReleased(KeyEvent e){
@@ -46,11 +43,11 @@ public class MoveABall extends JFrame implements KeyListener{
 
 	public static void  main (String args[]){
 		MoveABall myFrame = new MoveABall();
-		myFrame.setSize(600,600);
+		myFrame.setSize(1366,720);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);
 		myFrame.add(myFrame.draw);
 		myFrame.addKeyListener(myFrame);
-		System.out.println("Playing Nonsense Ball...");
+		System.out.println("Playing...");
 	}
 }
